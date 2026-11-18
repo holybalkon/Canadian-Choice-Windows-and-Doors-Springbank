@@ -916,3 +916,44 @@ section.hero .hero__footer .hero-footer { -webkit-box-orient: vertical; -webkit-
 .star-rating.is-busy { cursor: wait; }
 
 .star-rating .star-value.rtl { transform: scaleX(-1); right: 0px; left: auto; }
+
+/* Space between the video reviews grid and the "Read our Springbank Google reviews" button.
+   The preceding .grid-x._mb has a negative margin-bottom that otherwise glues the button to the thumbnails. */
+.reviews-cta { margin-top: 2.5rem; margin-bottom: 0; }
+
+@media print, screen and (width >= 52.5em) {
+  .reviews-cta { margin-top: 3.125rem; }
+}
+
+/* Location block: business name, directions and contact details (Springbank landing) */
+.location-section__title--name { text-transform: none; font-size: 2rem; line-height: 1.15; margin-bottom: 1.25rem; }
+
+@media print, screen and (width >= 64em) {
+  .location-section__title--name { font-size: 2.5rem; }
+}
+
+.location-section__intro { color: rgba(255, 255, 255, 0.85); margin-bottom: 1rem; }
+
+.location-section__link { color: #fff; text-decoration: underline; text-decoration-color: #bb2542; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
+.location-section__link:hover, .location-section__link:focus { color: #fff; text-decoration-color: #fff; }
+.location-section__link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+.location-section__details { margin: 1.5rem 0 0; }
+.location-section__details dt { font-weight: 700; color: rgba(255, 255, 255, 0.6); margin: 0; }
+.location-section__details dd { margin: 0 0 1.25rem; font-size: 1.125rem; }
+.location-section__details dd:last-child { margin-bottom: 0; }
+
+/* The location logo is absolutely positioned top-right above 1024px (main.css).
+   Reserve room above the content so the long business-name title never runs under it.
+   Logo: 5rem wide (~3.65rem tall) at top 3.75rem / 1.5rem. */
+@media (min-width: 1025px) {
+  .location-section__body { padding-top: 8.5rem; }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .location-section__body { padding-top: 6.5rem; }
+}
+
+/* Space between the "Communities we serve" block and the Past Projects / Installation Process buttons.
+   main.css sets .section._no-tp { padding-top: 0 }, which glued the buttons to the gray section above. */
+.section._no-tp { padding-top: 2.5rem; }
