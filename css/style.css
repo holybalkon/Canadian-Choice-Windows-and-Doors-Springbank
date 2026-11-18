@@ -1,4 +1,4 @@
-@font-face { font-family: "Neue Haas Display"; src: local("Neue Haas Display Roman"), local("NeueHaasDisplayRoman"), url("../assets/fonts/NeueHaasDisplayRoman.woff2") format("woff2"), url("../assets/fonts/NeueHaasDisplayRoman.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+﻿@font-face { font-family: "Neue Haas Display"; src: local("Neue Haas Display Roman"), local("NeueHaasDisplayRoman"), url("../assets/fonts/NeueHaasDisplayRoman.woff2") format("woff2"), url("../assets/fonts/NeueHaasDisplayRoman.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 
 @font-face { font-family: "Neue Haas Display"; src: local("Neue Haas Display Medium"), local("NeueHaasDisplayMedium"), url("../assets/fonts/NeueHaasDisplayMedium.woff2") format("woff2"), url("../assets/fonts/NeueHaasDisplayMedium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
 
@@ -957,3 +957,65 @@ section.hero .hero__footer .hero-footer { -webkit-box-orient: vertical; -webkit-
 /* Space between the "Communities we serve" block and the Past Projects / Installation Process buttons.
    main.css sets .section._no-tp { padding-top: 0 }, which glued the buttons to the gray section above. */
 .section._no-tp { padding-top: 2.5rem; }
+
+/* Text wordmark (replaces image logo) */
+.h-logo--text { font-family: 'Neue Haas Display', Arial, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.1; color: #0b1623; text-decoration: none; max-width: none; width: auto; }
+.h-logo--text span { color: #bb2542; }
+.footer .h-logo--text { color: #fff; }
+
+/* In-page navigation */
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 7rem; }
+.h-nav-mobile { display: flex; gap: .5rem; overflow-x: auto; padding: .5rem .625rem; background: #fff; border-top: 1px solid #eee; -webkit-overflow-scrolling: touch; }
+.h-nav-mobile a { flex: 0 0 auto; color: #000; text-transform: uppercase; font-size: .8125rem; font-weight: 500; text-decoration: none; padding: .25rem .75rem; border: 1px solid #ddd; border-radius: 62.5rem; }
+@media screen and (min-width: 60em) { .h-nav-mobile { display: none; } }
+.footer__nav-list a { color: inherit; }
+
+/* Logo + wordmark */
+.h-logo--text { display: inline-flex; align-items: center; gap: .625rem; }
+.h-logo__img { display: block; height: 2.25rem; width: auto; flex: 0 0 auto; }
+.h-logo--text .h-logo__text { font-weight: 700; font-size: 1rem; line-height: 1.1; letter-spacing: .01em; }
+@media screen and (min-width: 40em) { .h-logo__img { height: 2.75rem; } .h-logo--text .h-logo__text { font-size: 1.125rem; } }
+.h-logo--text .h-logo__text { color: inherit; }
+.h-logo--text .h-logo__text > span { color: #bb2542; }
+
+/* Logo text: two lines, like the brand mock */
+.h-logo--text { gap: .75rem; }
+.h-logo--text .h-logo__text { display: block; font-size: 1.125rem; line-height: 1.05; font-weight: 700; letter-spacing: 0; white-space: nowrap; }
+@media (min-width: 40em) { .h-logo--text .h-logo__text { font-size: 1.375rem; } }
+
+.header__cell._logo .h-logo.h-logo--text, .footer__logo .h-logo.h-logo--text { display: inline-flex; flex-direction: row; align-items: center; gap: .75rem; width: auto; max-width: none; }
+.h-logo--text .h-logo__img { width: auto; max-width: none; }
+
+.footer__logo .h-logo.h-logo--text { margin-left: 0; }
+.footer__logo .h-logo.h-logo--text img.h-logo__img { width: auto; height: 2.25rem; max-width: none; }
+@media (min-width: 40em) { .footer__logo .h-logo.h-logo--text img.h-logo__img { height: 2.75rem; } }
+
+/* Footer */
+.ft { background: #0b1623; color: #cfd6df; padding: 3.5rem 0 6.25rem; border-top: 4px solid #bb2542; font-size: 1rem; line-height: 1.5; }
+.ft__inner { max-width: 75rem; margin: 0 auto; padding: 0 1.25rem; }
+.ft__grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+.ft a { color: #fff; text-decoration: none; transition: color .2s; }
+.ft a:hover, .ft a:focus-visible { color: #ff6b88; }
+.ft a:focus-visible { outline: 2px solid #ff6b88; outline-offset: 3px; border-radius: 2px; }
+.ft__brand .h-logo--text { color: #fff; }
+.ft__about { margin: 1.25rem 0 1.5rem; max-width: 22rem; color: #aab4c1; }
+.ft__btn { display: inline-block; background: #bb2542; color: #fff; font-weight: 700; padding: .875rem 1.5rem; border-radius: .375rem; }
+.ft__btn:hover, .ft__btn:focus-visible { background: #d12d50; color: #fff; }
+.ft__title { margin: 0 0 1.25rem; font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; }
+.ft__list { list-style: none; margin: 0; padding: 0; }
+.ft__list li { margin-bottom: .625rem; }
+.ft__list a { display: inline-block; padding: .125rem 0; }
+.ft__list--contact li { margin-bottom: 1.125rem; }
+.ft__label { display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #7f8b9a; margin-bottom: .125rem; }
+.ft__phone { font-size: 1.5rem; font-weight: 700; }
+.ft__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.12); font-size: .875rem; color: #8d98a6; }
+.ft__bottom p { margin: 0; }
+@media (min-width: 40em) { .ft__grid { grid-template-columns: 1fr 1fr; } .ft__brand { grid-column: 1 / -1; } }
+@media (min-width: 64em) { .ft { padding-bottom: 2.5rem; } .ft__grid { grid-template-columns: 1.4fr 1fr 1.2fr; gap: 4rem; } .ft__brand { grid-column: auto; } }
+
+/* Footer logo: text under the icon */
+.ft__brand .h-logo.h-logo--text { flex-direction: column; align-items: flex-start; gap: .75rem; }
+.ft__brand .h-logo.h-logo--text .h-logo__img { height: 3.5rem; }
+.ft__brand .h-logo__text { font-size: 1.5rem; }
+.ft__brand .h-logo__text br { display: none; }
