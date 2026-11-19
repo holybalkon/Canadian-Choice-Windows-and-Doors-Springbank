@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js crjs" lang="en">
 <head>
 <meta charset="utf-8">
@@ -15,7 +15,7 @@
 <link rel="preload" href="assets/fonts/NeueHaasDisplayMedium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/NeueHaasDisplayBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/rd/main.css">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=8">
 <link rel="stylesheet" href="css/grid-fix.css">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -31,6 +31,7 @@
 <header class="header" id="page-header" data-scroll-header="">
 <div class="header__container">
 <div class="header__grid align-justify">
+<div class="header__cell _m-menu-trigger"><button type="button" class="h-burger" aria-label="Open menu" aria-expanded="false" aria-controls="h-nav-mobile"><span class="h-burger__bar"></span></button></div>
 <div class="header__cell _logo"><a href="#" class="h-logo h-logo--text" aria-label="Windows and Doors"><img src="logo.svg" alt="" width="52" height="35" class="h-logo__img"><span class="h-logo__text">Windows &amp;<br><span>Doors</span></span></a></div>
 <div class="header__cell _nav"><nav class="h-nav" aria-label="Page sections"><ul class="h-nav__cell"><li class="h-nav__item"><a href="#windows" class="h-nav__link _bold">Windows</a></li><li class="h-nav__item"><a href="#doors" class="h-nav__link _bold">Doors</a></li><li class="h-nav__item"><a href="#pricing" class="h-nav__link _bold">Pricing</a></li><li class="h-nav__item"><a href="#installation" class="h-nav__link _bold">Installation</a></li><li class="h-nav__item"><a href="#why-us" class="h-nav__link _bold">Why Us</a></li><li class="h-nav__item"><a href="#faq" class="h-nav__link _bold">FAQ</a></li><li class="h-nav__item"><a href="#contact" class="h-nav__link _bold">Contact</a></li></ul></nav></div>
 <div class="header__cell flex align-center justify-end">
@@ -44,7 +45,7 @@
 <div class="header__cell _m-phones-trigger"><a class="h-phones-trigger" href="tel:+15876008069" aria-label="Call 587-600-8069"><svg class="h-phones-trigger__ico svg-ico svg-ico_phone-vert"><use xlink:href="assets/rd_img/sprite.svg#svg-ico_phone-vert"></use></svg></a></div>
 </div>
 </div>
-<nav class="h-nav-mobile" aria-label="Page sections"><a href="#windows">Windows</a><a href="#doors">Doors</a><a href="#pricing">Pricing</a><a href="#installation">Installation</a><a href="#why-us">Why Us</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<nav class="h-nav-mobile" id="h-nav-mobile" aria-label="Page sections" hidden><a href="#windows">Windows</a><a href="#doors">Doors</a><a href="#pricing">Pricing</a><a href="#installation">Installation</a><a href="#why-us">Why Us</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
 </header>
 <div class="header-placeholder" id="page-header-placeholder"></div>
 
@@ -335,7 +336,7 @@
 
 <section class="section _draft-loc" id="draftlock-section"><div class="grid-container _large">
  <div class="grid-x grid-margin-x">
-  <div class="cell medium-6 large-5 _mb text-center medium-text-left small-order-2 medium-order-1"><img src="assets/rd_img/ccw-draftlock-plus-triple-glaze.png" alt="DraftLOCKplus triple glaze" loading="lazy"></div>
+  <div class="cell medium-6 large-5 _mb text-center medium-text-left small-order-2 medium-order-1"><img src="assets/rd_img/draftlock-plus-triple-glaze.png" alt="DraftLOCKplus triple glaze" loading="lazy"></div>
   <div class="cell medium-6 _mb small-order-1 medium-order-2"><h2 class="section__title _simple text-center medium-text-left"><strong></strong> Technology</h2>
    <p>We design every window around your home. Our team will assess your lighting, insulation, security, and style needs to find the right fit for every room. Built with DraftLOCK technology, our windows feature custom architectural moulding and triple-sealed vinyl frames. They reduce outside noise and can lower energy costs by up to 30%. Low-E coating reflects heat in summer and retains warmth in winter for year-round comfort. Choose from awning, casement, sliding tilt, bay &amp; bow, double hung tilt and architectural windows in any colour, each backed by our 25-year transferable warranty.*</p></div>
  </div>
@@ -362,7 +363,7 @@
                 </div>
 
                 <div class="dl-compare__cell _pb-mobile">
-                    <img src="assets/rd_img/comparison/ccw-draftlock-plus-triple-glaze-sm--2.png" alt="Comparison Illustration" width="473" height="528" loading="lazy">
+                    <img src="assets/rd_img/comparison/draftlock-plus-triple-glaze-sm--2.png" alt="Comparison Illustration" width="473" height="528" loading="lazy">
                     <div class="dl-compare__col-title"><svg width="121" height="18" viewBox="0 0 121 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="dl-plus dl-compare__dlp-logo">
 <g clip-path="url(#clip0_271_1743)">
 <path d="M19.1126 4.86336C19.3187 4.68252 19.5444 4.52122 19.775 4.37948H17.3804C15.7415 4.34526 14.6227 4.87803 14.0437 5.99243V4.56032H11.9141V15.9438H14.0437V9.97592C14.0437 7.69824 15.1919 6.59851 17.4933 6.65227H17.7975C18.087 5.96799 18.5287 5.37169 19.1126 4.86825" fill="#BB2542"></path>
@@ -770,7 +771,7 @@
     </div>
 
     <div class="location-section__ill">
-        <iframe title="Windows and Doors Springbank on Google Maps" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40116.583689204774!2d-114.32525282003185!3d51.066261469208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716d8dd48aa459%3A0x37c651dd9663d0f3!2sCanadian%20Choice%20Windows%20and%20Doors%20Springbank!5e0!3m2!1sen!2sua!4v1795001894068!5m2!1sen!2sua" class="location-section__map" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <iframe title="Windows and Doors Springbank on Google Maps" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40116.583689204774!2d-114.32525282003185!3d51.066261469208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716d8dd48aa459%3A0x37c651dd9663d0f3!2sWindows%20and%20Doors%20Springbank!5e0!3m2!1sen!2sua!4v1795001894068!5m2!1sen!2sua" class="location-section__map" frameborder="0" style="border:0" allowfullscreen=""></iframe>
     </div>
 </section>
 
@@ -841,5 +842,6 @@
             </div><!-- /off-canvas -->
 <script src="assets/rd/vendor.js" defer></script>
 <script src="assets/rd/main.js" defer></script>
+<script src="js/mobile-menu.js" defer></script>
 </body>
 </html>

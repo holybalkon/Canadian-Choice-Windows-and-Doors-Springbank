@@ -1,0 +1,39 @@
+{
+    // Local static server for the landing page. Started automatically by F5 (see launch.json).
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "serve",
+            "type": "process",
+            "command": "python",
+            "args": ["-u", "-m", "http.server", "8000", "--bind", "127.0.0.1"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "isBackground": true,
+            "presentation": { "reveal": "silent", "panel": "dedicated" },
+            "problemMatcher": {
+                "owner": "http-server",
+                "pattern": { "regexp": "^__never_matches__$" },
+                "background": {
+                    "activeBegins": true,
+                    "beginsPattern": "^",
+                    "endsPattern": "Serving HTTP on"
+                }
+            }
+        },
+        {
+            "label": "stop serve",
+            "type": "shell",
+            "command": "echo ${input:terminateServe}",
+            "presentation": { "reveal": "never" },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "terminateServe",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "serve"
+        }
+    ]
+}

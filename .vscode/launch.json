@@ -1,15 +1,16 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // F5: starts the local server (task "serve" in tasks.json) and opens the landing page in Chrome.
+    // Stopping the debug session (Shift+F5 / closing the Chrome window) also stops the server.
     "version": "0.2.0",
     "configurations": [
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "name": "Landing (localhost:8000)",
+            "url": "http://127.0.0.1:8000",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "serve",
+            "postDebugTask": "stop serve"
         }
     ]
 }
