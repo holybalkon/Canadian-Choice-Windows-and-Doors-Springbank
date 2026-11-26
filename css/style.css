@@ -1031,7 +1031,7 @@ html { scroll-behavior: smooth; }
 .ft__brand .h-logo.h-logo--text { flex-direction: column; align-items: flex-start; gap: .75rem; }
 .ft__brand .h-logo.h-logo--text .h-logo__img { height: 3.5rem; }
 .ft__brand .h-logo__text { font-size: 1.5rem; }
-.ft__brand .h-logo__text br { display: none; }
+
 
 /* Mobile header: logo left, phone icon + burger right */
 @media screen and (max-width: 59.99em) {
@@ -1047,3 +1047,23 @@ html { scroll-behavior: smooth; }
 }
 /* Keep the middle bar hidden while the menu is open (also on hover) */
 .h-burger[aria-expanded="true"]:hover .h-burger__bar { background: transparent; }
+
+/* 960-1180px: keep the full nav, compact the header so everything (incl. phone icon) fits */
+@media screen and (min-width: 60em) and (max-width: 73.74em) {
+  .header__cell { padding-left: .5rem; padding-right: .5rem; }
+  .header__cell._logo { min-width: 0; max-width: none; flex: 0 0 auto; }
+  .header__cell._logo .h-logo.h-logo--text { gap: .5rem; }
+  .h-logo--text .h-logo__text { font-size: 1.0625rem; }
+  .h-logo--text .h-logo__img { height: 2.25rem; }
+  .h-nav { margin-left: 0; margin-right: 0; }
+  .h-nav__cell { padding-left: 0; padding-right: 0; }
+  .h-nav__item { margin: 0; }
+  .h-nav__link { padding: .3125rem .5rem; font-size: .8125rem; }
+  .header__cell._m-phones-trigger { display: block; }
+  .h-phones-trigger { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; }
+  .h-phones-trigger__ico { width: 1.625rem; height: 1.625rem; }
+}
+
+/* No dropdown arrow next to the header phone */
+.h-phone__stage::after { display: none; }
+.h-phone__stage { padding-right: 1.25rem; }
